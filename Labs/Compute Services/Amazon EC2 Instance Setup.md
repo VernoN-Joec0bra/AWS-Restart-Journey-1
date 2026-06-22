@@ -20,7 +20,7 @@ The lab was structured to provide a foundational understanding of Amazon Elastic
 - **Resilience** was emphasized as the capability to build failure-resistant applications
 
 **[Screenshot: AWS Management Console EC2 Dashboard Overview]**
-> *Place architectural diagram showing EC2 service within AWS infrastructure here*
+> <img width="428" height="333" alt="Screenshot 2026-06-22 at 20 07 37" src="https://github.com/user-attachments/assets/af5f4756-2509-458e-a137-89df76dacde9" />
 
 ---
 
@@ -48,14 +48,15 @@ The journey began by accessing the AWS Management Console and navigating to the 
 The instance was named "Web Server" through the Name and tags pane. This action created a key-value pair in AWS that allowed for easy identification and management of the resource.
 
 **[Screenshot: EC2 Launch Wizard - Naming Step]**
-> *Showing the Name and tags pane with "Web Server" entered in the text box*
+> <img width="813" height="212" alt="Screenshot 2026-06-22 at 20 41 00" src="https://github.com/user-attachments/assets/dfd6fe07-5fbc-4009-a193-d9d1933938b1" />
+
 
 #### Step 2: Amazon Machine Image (AMI) Selection
 
 The Amazon Linux 2023 AMI was selected from the Quick Start list. This image was chosen as it provided a pre-configured operating system template suitable for web server deployment.
 
 **[Screenshot: AMI Selection Screen]**
-> *Displaying the Application and OS Images pane with Amazon Linux 2023 highlighted*
+>  <img width="788" height="566" alt="Screenshot 2026-06-22 at 20 48 33" src="https://github.com/user-attachments/assets/ade9197c-6563-4e69-ab6c-95372c72d781" />
 
 #### Step 3: Instance Type Configuration
 
@@ -65,7 +66,8 @@ A **t3.micro** instance type was selected for this lab. This instance type was n
 - Suitable for low-traffic applications and testing scenarios
 
 **[Screenshot: Instance Type Selection - t3.micro]**
-> *Showing the instance type selection dropdown with t3.micro highlighted*
+> <img width="713" height="463" alt="Screenshot 2026-06-22 at 20 51 24" src="https://github.com/user-attachments/assets/64e27e56-6a93-4b55-b4bb-b141a857e86b" />
+
 
 #### Step 4: Key Pair Configuration
 
@@ -81,7 +83,8 @@ The network settings were configured as follows:
 - **Initial Inbound Rules:** The default SSH rule was removed to improve security posture
 
 **[Screenshot: Network Settings Configuration]**
-> *Displaying the VPC selection, security group creation, and inbound rules configuration*
+> <img width="1066" height="785" alt="Screenshot 2026-06-22 at 21 05 02" src="https://github.com/user-attachments/assets/a05590af-b250-4efb-a789-d8d6c4dbf89e" />
+
 
 #### Step 6: Storage Configuration
 
@@ -110,7 +113,8 @@ echo '<html><h1>Hello From Your Web Server!</h1></html>' > /var/www/html/index.h
 - Created a simple HTML test page
 
 **[Screenshot: Advanced Details - User Data Script Entry]**
-> *Showing the User Data text box with the bash script visible*
+> <img width="498" height="480" alt="Screenshot 2026-06-22 at 21 11 52" src="https://github.com/user-attachments/assets/ff7bd7fc-8edd-4ac0-9484-412755d569f7" />
+
 
 #### Step 8: Instance Launch
 
@@ -122,7 +126,7 @@ The instance was launched successfully and transitioned through the following st
 The instance was assigned a public DNS name and public IPv4 address for external connectivity.
 
 **[Screenshot: EC2 Instances Dashboard - Web Server Running]**
-> *Showing the Web Server instance in Running state with status checks at 2/2 passed*
+> <img width="869" height="230" alt="Screenshot 2026-06-22 at 21 17 50" src="https://github.com/user-attachments/assets/24fdf4d6-dbba-40c0-9d32-a002e59eed53" />
 
 ---
 
@@ -136,7 +140,8 @@ Once the instance was fully operational, the monitoring capabilities were explor
 - **Instance Reachability Check:** Confirmed that the instance's operating system was operational
 
 **[Screenshot: Status Checks Tab]**
-> *Displaying the System reachability and Instance reachability checks both in "passed" status*
+> <img width="1083" height="179" alt="Screenshot 2026-06-22 at 21 22 17" src="https://github.com/user-attachments/assets/8581fb7a-83b4-43bf-ae91-67104bc58f09" />
+
 
 ### Monitoring Tab Review
 
@@ -148,14 +153,16 @@ The Monitoring tab was accessed to view CloudWatch metrics being collected for t
 - Detailed (one-minute) monitoring availability
 
 **[Screenshot: CloudWatch Metrics for EC2 Instance]**
-> *Showing the monitoring graphs and available metrics dashboard*
+> <img width="1405" height="422" alt="Screenshot 2026-06-22 at 21 24 56" src="https://github.com/user-attachments/assets/fe9792bd-74a7-4c27-aee1-08c467c1beac" />
+
 
 ### Instance Screenshot Feature
 
 The instance screenshot capability was tested through the Actions menu (Monitor and troubleshoot → Get Instance Screenshot). This feature was noted as valuable for troubleshooting when SSH or RDP connections were unavailable, as it displayed the actual console output of the instance.
 
 **[Screenshot: Instance Console Screenshot]**
-> *Showing the EC2 instance console display as captured by the screenshot feature*
+> <img width="800" height="600" alt="i-0e837d3c4b80c4c3d" src="https://github.com/user-attachments/assets/fff896c2-2936-4be6-8630-5d6b9c4612de" />
+
 
 ---
 
@@ -180,7 +187,8 @@ The security group was updated to permit HTTP traffic:
    - **Source:** Anywhere-IPv4 (0.0.0.0/0)
 
 **[Screenshot: Inbound Rules Configuration - HTTP Rule Addition]**
-> *Showing the Edit inbound rules interface with the HTTP rule being added*
+> <img width="887" height="552" alt="Screenshot 2026-06-22 at 21 32 16" src="https://github.com/user-attachments/assets/e2593449-8699-4d9c-817a-06016f5a1ac2" />
+
 
 ### Successful Web Server Access
 
@@ -191,7 +199,8 @@ Hello From Your Web Server!
 ```
 
 **[Screenshot: Web Server Successfully Accessed]**
-> *Showing the browser window displaying the "Hello From Your Web Server!" message*
+> <img width="826" height="294" alt="Screenshot 2026-06-22 at 21 34 02" src="https://github.com/user-attachments/assets/24f5d804-1b27-4406-93d9-eb205523b8ae" />
+
 
 ---
 
@@ -204,7 +213,8 @@ The instance was stopped through the Instance state menu before resizing operati
 - Storage charges for EBS volumes remained active
 
 **[Screenshot: Instance State - Stopped]**
-> *Showing the Web Server instance in stopped state*
+> <img width="1018" height="138" alt="Screenshot 2026-06-22 at 21 36 22" src="https://github.com/user-attachments/assets/5fa4aaba-0eea-47be-8fb4-8fb89e89f641" />
+
 
 ### Instance Type Upgrade
 
@@ -214,7 +224,8 @@ The instance type was upgraded from **t3.micro** to **t3.small** using the Insta
 - **Benefit:** Doubled available memory for improved application performance
 
 **[Screenshot: Instance Type Change Dialog]**
-> *Showing the change instance type interface with t3.small selected*
+> <img width="1667" height="869" alt="Screenshot 2026-06-22 at 21 38 43" src="https://github.com/user-attachments/assets/f0b64b7c-0909-475b-95e3-4448ea867f23" />
+
 
 ### EBS Volume Resizing
 
@@ -225,7 +236,8 @@ The root EBS volume was resized through the Volumes interface:
 - **Storage Increase:** 2 GiB additional capacity
 
 **[Screenshot: EBS Volume Modification]**
-> *Displaying the Modify volume dialog with size change from 8 GiB to 10 GiB*
+> <img width="1652" height="664" alt="Screenshot 2026-06-22 at 21 41 36" src="https://github.com/user-attachments/assets/9772b34d-b8ad-47a2-a4dc-93335a7372d1" />
+
 
 ### Instance Restart
 
@@ -234,7 +246,9 @@ The resized instance was restarted, bringing it back to a **Running** state with
 - Larger root volume (10 GiB)
 
 **[Screenshot: Instance Restarted with New Configuration]**
-> *Showing the Web Server instance running with updated instance type and volume size*
+> <img width="1028" height="94" alt="Screenshot 2026-06-22 at 21 47 33" src="https://github.com/user-attachments/assets/486795ed-ae26-4531-ad2f-41610f7b2aef" />
+> <img width="887" height="162" alt="Screenshot 2026-06-22 at 21 47 12" src="https://github.com/user-attachments/assets/ecc0b8d0-11a2-442c-bb61-72d9b888e244" />
+
 
 ---
 
@@ -251,7 +265,8 @@ Failed to terminate an instance: The instance may not be terminated.
 This failure occurred because termination protection was enabled during the initial instance configuration.
 
 **[Screenshot: Termination Protection Error]**
-> *Showing the error message when attempting to terminate a protected instance*
+> <img width="656" height="171" alt="Screenshot 2026-06-22 at 21 53 20" src="https://github.com/user-attachments/assets/37678ac9-7822-42fd-bd5b-257ebea06ab2" />
+
 
 ### Disabling Protection
 
@@ -262,7 +277,8 @@ Termination protection was disabled through the Instance settings menu:
 3. Saved the changes
 
 **[Screenshot: Termination Protection Disabled]**
-> *Displaying the Instance settings dialog with termination protection unchecked*
+> <img width="596" height="377" alt="Screenshot 2026-06-22 at 21 54 45" src="https://github.com/user-attachments/assets/db6d44b7-4713-47db-9834-3a3829d9ed37" />
+
 
 ### Instance Termination
 
@@ -273,7 +289,8 @@ With termination protection disabled, the instance was successfully terminated:
 3. Instance transitioned through **shutting-down** state and reached **terminated** state
 
 **[Screenshot: Instance Terminated]**
-> *Showing the Web Server instance in terminated state*
+> <img width="825" height="162" alt="Screenshot 2026-06-22 at 21 56 40" src="https://github.com/user-attachments/assets/b63397e2-3e6f-49ab-9e9c-0b1d547a792b" />
+
 
 ---
 
